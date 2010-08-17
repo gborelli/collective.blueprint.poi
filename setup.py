@@ -24,6 +24,8 @@ setup(name='collective.blueprint.poi',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'collective.transmogrifier',
+          'Products.Poi',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

@@ -1,8 +1,16 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
+    xmlns:transmogrifier="http://namespaces.plone.org/transmogrifier"
     i18n_domain="collective.blueprint.poi">
 
-  <five:registerPackage package="." initialize=".initialize" />
+    <include package="collective.transmogrifier" file="meta.zcml"/> 
+    <include package="collective.transmogrifier"/>
+
+    <utility component="collective.blueprint.poi.ResponseExport"
+             name="collective.blueprint.poi.responseexport" />
+
+    <utility component="collective.blueprint.poi.ResponseImport"
+             name="collective.blueprint.poi.responseimport" />
 
 </configure>
